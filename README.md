@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Phoenix-UX
 
-First, run the development server:
+Phoenix-UX is a collection of reusable components for creating stunning UX animations, powered by GSAP (GreenSock Animation Platform). It provides easy integration with popular frameworks like Next.js and offers customizable, responsive components to elevate the user experience of your web applications.
+
+---
+
+## Features
+
+- **Component-Based**: Easily incorporate interactive animations into your web applications with reusable components.
+- **Powered by GSAP**: Utilizes the power and flexibility of GSAP for smooth and performant animations.
+- **Framework Compatibility**: Seamlessly integrates with frameworks like Next.js for rapid development.
+- **Customizable**: Tailor animation properties and behaviors to match your project's design and branding.
+- **Responsive**: Ensures animations look great across various screen sizes and devices.
+
+---
+
+## Installation
+
+You can install Phoenix-UX via npm or yarn:
 
 ```bash
-npm run dev
+npm install phoenix-ux
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn add phoenix-ux
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Magnetic Component
 
-## Learn More
+The `Magnetic` component creates an interactive magnetic effect around an element.
 
-To learn more about Next.js, take a look at the following resources:
+```tsx
+import React from 'react';
+import { Magnetic } from 'phoenix-ux';
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+const MyComponent = () => {
+    return (
+        <Magnetic>
+            {/* Your content here */}
+        </Magnetic>
+    );
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+export default MyComponent;
+```
 
-## Deploy on Vercel
+### CountUp Component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The `CountUp` component animates a count-up effect from a start number to an end number.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```tsx
+import React from 'react';
+import { CountUp } from 'phoenix-ux';
+
+const MyCounter = () => {
+    return (
+        <CountUp start={0} end={100} duration={3} />
+    );
+};
+
+export default MyCounter;
+```
+
+---
+
+## Props
+
+### Magnetic Props
+
+| Prop      | Type     | Default  | Description                              |
+| --------- | -------- | -------- | ---------------------------------------- |
+| [None]    |          |          | The Magnetic component does not accept any props. |
+
+### CountUp Props
+
+| Prop      | Type     | Default  | Description                              |
+| --------- | -------- | -------- | ---------------------------------------- |
+| start     | number   |          | The starting number for the count-up animation. |
+| end       | number   |          | The target number to count up to.        |
+| duration  | number   | 3        | The duration of the count-up animation in seconds. |
+
+---
+
+## Configuration
+
+Phoenix-UX components offer various configuration options to customize the behavior and appearance of the animations:
+
+- **Duration**: Adjust the duration of the animations to control their speed.
+- **Easing**: Choose from a range of easing functions to define the acceleration and deceleration of the animations.
+- **Customization**: Customize the appearance and behavior of the components to match your project's design and branding.
+
+By leveraging these configuration options, you can fine-tune the animations to create engaging and seamless user experiences tailored to your specific project requirements.
+
+---
+
+### Example 3: Animated Card
+
+```tsx
+import React from 'react';
+import { Magnetic } from 'phoenix-ux';
+
+const AnimatedCard = () => {
+  return (
+    <div className="card">
+      <Magnetic>
+        <img src="card-image.jpg" alt="Card Image" />
+        <h2>Title</h2>
+        <p>Description</p>
+      </Magnetic>
+    </div>
+  );
+};
+
+export default AnimatedCard;
+```
+
+---
+
+## Contributing
+
+We welcome contributions from the community! If you have ideas for improvements or new features, please open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+- [GSAP](https://greensock.com/) for providing a powerful animation library.
+- Add any other acknowledgements or credits as needed.
