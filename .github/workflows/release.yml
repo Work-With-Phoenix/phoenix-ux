@@ -30,8 +30,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-    if: github.ref == 'refs/heads/main' || github.event_name == 'release'
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -44,7 +42,23 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check Rate Limit
+        id: rate-limit-check
+        run: |
+          # Implement rate limiting logic here
+          # Example: Check if rate limit is exceeded
+          CURRENT_TIME=$(date +%s)
+          LAST_PUBLICATION_TIME=$(cat last_publication_time.txt || echo 0)
+          RATE_LIMIT_INTERVAL=3600 # 1 hour
+          if [[ $(($CURRENT_TIME - $LAST_PUBLICATION_TIME)) -lt $RATE_LIMIT_INTERVAL ]]; then
+            echo "::set-output name=rate_limit_exceeded::true"
+          else
+            echo "::set-output name=rate_limit_exceeded::false"
+            echo $CURRENT_TIME > last_publication_time.txt
+          fi
+
       - name: Publish to npm
+        if: steps.rate-limit-check.outputs.rate_limit_exceeded != 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
