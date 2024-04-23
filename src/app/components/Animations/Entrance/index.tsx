@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, ReactNode } from 'react';
 import gsap from 'gsap';
 
-interface GlobalEntranceAnimationProps {
+interface EntranceAnimationProps {
   children: ReactNode;
   duration: number;
   delay: number;
@@ -10,7 +10,7 @@ interface GlobalEntranceAnimationProps {
   direction: 'left' | 'right' | 'up' | 'down';
 }
 
-const GlobalEntranceAnimation: React.FC<GlobalEntranceAnimationProps> = ({
+const EntranceAnimation: React.FC<EntranceAnimationProps> = ({
   children,
   duration,
   delay,
@@ -18,6 +18,8 @@ const GlobalEntranceAnimation: React.FC<GlobalEntranceAnimationProps> = ({
   direction,
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
+  const lastScrollTopRef = useRef<number>(0);
+  const isInViewRef = useRef<boolean>(false);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -26,8 +28,10 @@ const GlobalEntranceAnimation: React.FC<GlobalEntranceAnimationProps> = ({
     const handleIntersect: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          isInViewRef.current = true;
           animateEntrance();
-          observer.unobserve(element);
+        } else {
+          isInViewRef.current = false;
         }
       });
     };
@@ -68,12 +72,31 @@ const GlobalEntranceAnimation: React.FC<GlobalEntranceAnimationProps> = ({
 
     observer.observe(element);
 
+    const handleScroll = () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTopRef.current) {
+        // Scroll down
+        if (!isInViewRef.current) {
+          // Only trigger animation if not already in view
+          isInViewRef.current = true;
+          animateEntrance();
+        }
+      } else {
+        // Scroll up
+        isInViewRef.current = false;
+      }
+      lastScrollTopRef.current = st <= 0 ? 0 : st;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [duration, delay, distance, direction]);
 
   return <div ref={elementRef}>{children}</div>;
 };
 
-export default GlobalEntranceAnimation;
+export default EntranceAnimation;
