@@ -197,5 +197,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 
 - [GSAP](https://greensock.com/) for providing a powerful animation library.
-- Add any other acknowledgements or credits as needed.
 - The hover effects for our buttons were inspired by the work of [Shrihari](https://tailwindcomponents.com/u/shrihari) on [Tailwind Components](https://tailwindcomponents.com/component/button-hover-effects). We appreciate their creativity and contribution to the web development community.
