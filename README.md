@@ -1,6 +1,8 @@
 
 # Phoenix-UX
 
+![Phoenix-UX Logo](images/logo/logo.svg)
+
 Phoenix-UX is a collection of reusable components for creating stunning UX animations, powered by GSAP (GreenSock Animation Platform). It provides easy integration with popular frameworks like Next.js and offers customizable, responsive components to elevate the user experience of your web applications.
 
 ---
@@ -65,6 +67,23 @@ const MyCounter = () => {
 export default MyCounter;
 ```
 
+### Button Component
+
+The `Button` component provides various button styles and effects. You can use different button types such as `Swipe`, `Curtain`, or `Circle` by specifying them as children of the `Button` component.
+
+```tsx
+import React from 'react';
+import { Button } from 'phoenix-ux';
+
+const MyComponent = () => {
+    return (
+        <Button.Swipe title="Swipe Button" />
+    );
+};
+
+export default MyComponent;
+```
+
 ---
 
 ## Props
@@ -82,6 +101,12 @@ export default MyCounter;
 | start     | number   |          | The starting number for the count-up animation. |
 | end       | number   |          | The target number to count up to.        |
 | duration  | number   | 3        | The duration of the count-up animation in seconds. |
+
+### Button Props
+
+| Prop      | Type     | Default  | Description                              |
+| --------- | -------- | -------- | ---------------------------------------- |
+| title     | string   |          | The title or label for the button.       |
 
 ---
 
@@ -136,3 +161,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - [GSAP](https://greensock.com/) for providing a powerful animation library.
 - Add any other acknowledgements or credits as needed.
+- The hover effects for our buttons were inspired by the work of [Shrihari](https://tailwindcomponents.com/u/shrihari) on [Tailwind Components](https://tailwindcomponents.com/component/button-hover-effects). We appreciate their creativity and contribution to the web development community.

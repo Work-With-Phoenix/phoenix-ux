@@ -1,16 +1,26 @@
 
 import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
+import  {Swipe, Circle,Curtain,Center} from "./components/Button"
 
 export default function Home() {
   return (
-    <div className="h-[200vh] ">
+    <div className="w-10/12 mx-auto ">
      <Magnetic>
       <button>Magnetic</button>
      </Magnetic>
-     <div className="flex h-full py-10 w-full bg-red-100">
+     <div className="">
                 Counting from <CountUp start={0} end={1000} duration={5.5}  /> to{' '}
               
+            </div>
+            <div className="flex  flex-wrap gap-5 items-center">
+             
+              <Swipe className="capitalize" title={"swipe button"} />
+              <Circle title={"circle button"} />
+              <Curtain title={"curtain button"} />
+              <Center title={"center button"} />
+             
+
             </div>
     </div>
   );
