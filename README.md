@@ -84,6 +84,29 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
+### Entrance Animate
+
+```tsx
+import React from 'react';
+import { EntranceAnimation } from 'phoenix-ux';
+
+const Example = () => {
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Welcome to My Website</h1>
+      <EntranceAnimation duration={1} delay={0.5} distance={50} direction="up">
+        <p className="text-lg">This text will animate in from below when it comes into view.</p>
+      </EntranceAnimation>
+      <EntranceAnimation duration={1} delay={0.5} distance={50} direction="down">
+        <p className="text-lg">And this text will animate in from above.</p>
+      </EntranceAnimation>
+    </div>
+  );
+};
+
+export default Example;
+
+```
 ---
 
 ## Props
@@ -107,6 +130,20 @@ export default MyComponent;
 | Prop      | Type     | Default  | Description                              |
 | --------- | -------- | -------- | ---------------------------------------- |
 | title     | string   |          | The title or label for the button.       |
+
+## Animations
+
+### Entrance Animation
+
+This will allow users to import and use the `EntranceAnimation` component from your package in their projects.
+
+| Name       | Type   | Default | Description                               |
+|------------|--------|---------|-------------------------------------------|
+| `children` | `ReactNode` | - | The content to animate.               |
+| `duration` | `number`   | - | The duration of the animation in seconds. |
+| `delay`    | `number`   | - | The delay before the animation starts in seconds. |
+| `distance` | `number`   | - | The distance the content will animate from in pixels. |
+| `direction`| `'left' | 'right' | 'up' | 'down'` | - | The direction from which the content will animate. |
 
 ---
 
