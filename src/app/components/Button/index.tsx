@@ -3,6 +3,7 @@ import {default as Circle } from './Circle';
 import {default as Center} from './Center';
 import {default as Smoosh} from './Smoosh';
 import {default as Curtain} from './Curtain';
+import {default as Dotted} from './Dotted';
 
 interface ButtonProps {
     title?: string;
@@ -16,9 +17,10 @@ const Button: React.FC<ButtonProps> = ({ title }) => {
             <Center title={title} />
             <Smoosh title={title} />
             <Curtain title={title} />
+            <Dotted title={title} />
         </>
     );
 };
 
 export default Button;
-export { Swipe, Circle,Curtain, Smoosh, Center };
+export { Swipe, Circle,Curtain, Smoosh, Center,Dotted };

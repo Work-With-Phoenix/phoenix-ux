@@ -1,7 +1,7 @@
 
 import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
-import  {Swipe, Circle,Curtain,Center} from "./components/Button"
+import  {Swipe, Circle,Curtain,Center,Dotted} from "./components/Button"
 
 export default function Home() {
   return (
@@ -19,6 +19,8 @@ export default function Home() {
               <Circle title={"circle button"} />
               <Curtain title={"curtain button"} />
               <Center title={"center button"} />
+              <Dotted title={"dotted button"} />
+
              
 
             </div>

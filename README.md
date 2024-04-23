@@ -1,7 +1,7 @@
 
 # Phoenix-UX
 
-![Phoenix-UX Logo](https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg)
+  ![Phoenix-UX Logo](https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg)
 
 Phoenix-UX is a collection of reusable components for creating stunning UX animations, powered by GSAP (GreenSock Animation Platform). It provides easy integration with popular frameworks like Next.js and offers customizable, responsive components to elevate the user experience of your web applications.
 
