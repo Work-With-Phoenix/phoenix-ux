@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/CountUp/index.jsx", "src/utils/CountUp.js", "src/app/components/Animations/Entrance/index.jsx", "src/app/components/Button/Center/index.jsx", "src/app/components/Button/index.jsx"],
   "exclude": ["node_modules"]
 }

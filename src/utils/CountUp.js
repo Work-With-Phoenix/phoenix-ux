@@ -1,5 +1,4 @@
-
-export function animateCountUp(element: HTMLElement, start: number, end: number, duration: number): void {
+export function animateCountUp(element, start, end, duration) {
     const range = end - start;
     const increment = range / (duration * 60); // Assuming 60 frames per second
 

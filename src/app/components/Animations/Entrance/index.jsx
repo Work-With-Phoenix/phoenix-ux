@@ -1,31 +1,17 @@
 "use client"
-import React, { useEffect, useRef, ReactNode } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-interface EntranceAnimationProps {
-  children: ReactNode;
-  duration: number;
-  delay: number;
-  distance: number;
-  direction: 'left' | 'right' | 'up' | 'down';
-}
-
-const EntranceAnimation: React.FC<EntranceAnimationProps> = ({
-  children,
-  duration,
-  delay,
-  distance,
-  direction,
-}) => {
-  const elementRef = useRef<HTMLDivElement>(null);
-  const lastScrollTopRef = useRef<number>(0);
-  const isInViewRef = useRef<boolean>(false);
+const EntranceAnimation = ({ children, duration, delay, distance, direction }) => {
+  const elementRef = useRef(null);
+  const lastScrollTopRef = useRef(0);
+  const isInViewRef = useRef(false);
 
   useEffect(() => {
     const element = elementRef.current;
     if (!element) return;
 
-    const handleIntersect: IntersectionObserverCallback = (entries) => {
+    const handleIntersect = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           isInViewRef.current = true;
@@ -39,7 +25,7 @@ const EntranceAnimation: React.FC<EntranceAnimationProps> = ({
     const animateEntrance = () => {
       const tl = gsap.timeline();
 
-      const animationProps: any = { opacity: 0 }; // Use any type assertion here
+      const animationProps = { opacity: 0 };
       switch (direction) {
         case 'left':
           animationProps.x = -distance;
@@ -59,7 +45,7 @@ const EntranceAnimation: React.FC<EntranceAnimationProps> = ({
 
       tl.fromTo(
         element,
-        { opacity: 0, ...(animationProps as any) }, // Use type assertion here
+        { opacity: 0, ...animationProps },
         { opacity: 1, x: 0, y: 0, duration, delay }
       );
     };
@@ -67,7 +53,7 @@ const EntranceAnimation: React.FC<EntranceAnimationProps> = ({
     const observer = new IntersectionObserver(handleIntersect, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Adjust this threshold as needed
+      threshold: 0.5,
     });
 
     observer.observe(element);

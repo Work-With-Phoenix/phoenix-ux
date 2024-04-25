@@ -37,17 +37,19 @@ The `Magnetic` component creates an interactive magnetic effect around an elemen
 
 ```tsx
 import React from 'react';
-import { Magnetic } from 'phoenix-ux';
+import CountUp from './CountUp';
 
-const MyComponent = () => {
-    return (
-        <Magnetic>
-            {/* Your content here */}
-        </Magnetic>
-    );
+const Example = () => {
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Welcome to My Website</h1>
+      <CountUp start={0} end={100} duration={2} />
+    </div>
+  );
 };
 
-export default MyComponent;
+export default Example;
+
 ```
 
 ### CountUp Component

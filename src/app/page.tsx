@@ -1,7 +1,7 @@
 
 import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
-import  {Swipe, Circle,Curtain,Center,Dotted} from "./components/Button"
+import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
 
 
@@ -16,12 +16,18 @@ export default function Home() {
               
             </div>
             <div className="flex  flex-wrap gap-5 items-center">
+              <Button.Shine title="Shine" />
+              <Button.Center title="Center" />
+              <Button.Dotted title="Dotted" />
+              <Button.Curtain title="Curtain" />
+              <Button.Circle title="Circle" />
+              <Button.Hide title="Hide" />
+              <Button.Swipe title="Swipe" />
+              <Button.Smoosh title="Smoosh" />
+              <Button.Slide title="Slide" />
+              <Button.Skew title="Skew" />
              
-              <Swipe className="capitalize" title={"swipe button"} />
-              <Circle title={"circle button"} />
-              <Curtain title={"curtain button"} />
-              <Center title={"center button"} />
-              <Dotted title={"dotted button"} />
+             
 
              
 
