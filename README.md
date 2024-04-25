@@ -1,7 +1,9 @@
 
 # Phoenix-UX
 
-  ![Phoenix-UX Logo](https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg)
+<div style="display: flex; justify-content: center;">
+    <img src="https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg" alt="Phoenix-UX Logo">
+</div>
 
 Phoenix-UX is a collection of reusable components for creating stunning UX animations, powered by GSAP (GreenSock Animation Platform). It provides easy integration with popular frameworks like Next.js and offers customizable, responsive components to elevate the user experience of your web applications.
 
@@ -22,7 +24,7 @@ Phoenix-UX is a collection of reusable components for creating stunning UX anima
 You can install Phoenix-UX via npm or yarn:
 
 ```bash
-npm install phoenix-ux
+npm install phoenix-ux --save
 # or
 yarn add phoenix-ux
 ```
@@ -35,15 +37,17 @@ yarn add phoenix-ux
 
 The `Magnetic` component creates an interactive magnetic effect around an element.
 
-```tsx
+```jsx
 import React from 'react';
-import CountUp from './CountUp';
+import Magnetic from 'phoenix-ux';
 
 const Example = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold mb-4">Welcome to My Website</h1>
-      <CountUp start={0} end={100} duration={2} />
+      <Magnetic>
+      <button>Magnetic</button>
+     </Magnetic>
     </div>
   );
 };
@@ -56,13 +60,15 @@ export default Example;
 
 The `CountUp` component animates a count-up effect from a start number to an end number.
 
-```tsx
+```jsx
 import React from 'react';
-import { CountUp } from 'phoenix-ux';
+import CountUp  from 'phoenix-ux';
 
 const MyCounter = () => {
     return (
+      <>
         <CountUp start={0} end={100} duration={3} />
+        </>
     );
 };
 
@@ -73,13 +79,24 @@ export default MyCounter;
 
 The `Button` component provides various button styles and effects. You can use different button types such as `Swipe`, `Curtain`, or `Circle` by specifying them as children of the `Button` component.
 
-```tsx
+```jsx
 import React from 'react';
-import { Button } from 'phoenix-ux';
+import Button  from 'phoenix-ux';
 
 const MyComponent = () => {
     return (
-        <Button.Swipe title="Swipe Button" />
+       <>
+        <Button.Shine title="Shine" />
+              <Button.Center title="Center" />
+              <Button.Dotted title="Dotted" />
+              <Button.Curtain title="Curtain" />
+              <Button.Circle title="Circle" />
+              <Button.Hide title="Hide" />
+              <Button.Swipe title="Swipe" />
+              <Button.Smoosh title="Smoosh" />
+              <Button.Slide title="Slide" />
+              <Button.Skew title="Skew" />
+       </>
     );
 };
 
@@ -88,9 +105,9 @@ export default MyComponent;
 
 ### Entrance Animate
 
-```tsx
+```jsx
 import React from 'react';
-import { EntranceAnimation } from 'phoenix-ux';
+import EntranceAnimation  from 'phoenix-ux';
 
 const Example = () => {
   return (
@@ -107,8 +124,8 @@ const Example = () => {
 };
 
 export default Example;
-
 ```
+
 ---
 
 ## Props
@@ -163,9 +180,9 @@ By leveraging these configuration options, you can fine-tune the animations to c
 
 ### Example 3: Animated Card
 
-```tsx
+```jsx
 import React from 'react';
-import { Magnetic } from 'phoenix-ux';
+import  Magnetic from 'phoenix-ux';
 
 const AnimatedCard = () => {
   return (
