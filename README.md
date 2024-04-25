@@ -1,9 +1,7 @@
 
 # Phoenix-UX
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg" alt="Phoenix-UX Logo">
-</div>
+ ![Phoenix-UX Logo](https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876687/phoenix/phoenix-ux/logo-small_hkx9ed.svg)
 
 Phoenix-UX is a collection of reusable components for creating stunning UX animations, powered by GSAP (GreenSock Animation Platform). It provides easy integration with popular frameworks like Next.js and offers customizable, responsive components to elevate the user experience of your web applications.
 
@@ -62,7 +60,7 @@ The `CountUp` component animates a count-up effect from a start number to an end
 
 ```jsx
 import React from 'react';
-import CountUp  from 'phoenix-ux';
+import CountUp  from 'phoenix-ux/src/app/components/CountUp';
 
 const MyCounter = () => {
     return (
@@ -81,7 +79,7 @@ The `Button` component provides various button styles and effects. You can use d
 
 ```jsx
 import React from 'react';
-import Button  from 'phoenix-ux';
+import Button  from 'phoenix-ux/src/app/Component/Button';
 
 const MyComponent = () => {
     return (
@@ -107,7 +105,7 @@ export default MyComponent;
 
 ```jsx
 import React from 'react';
-import EntranceAnimation  from 'phoenix-ux';
+import EntranceAnimation  from 'phoenix-ux/src/app/components/Animations/EntranceAnimation';
 
 const Example = () => {
   return (
@@ -182,7 +180,7 @@ By leveraging these configuration options, you can fine-tune the animations to c
 
 ```jsx
 import React from 'react';
-import  Magnetic from 'phoenix-ux';
+import  Magnetic from 'phoenix-ux/src/app/component/Magnetic';
 
 const AnimatedCard = () => {
   return (
