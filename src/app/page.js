@@ -4,21 +4,18 @@ import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
 import CookieConsentModal from "./components/CookieModal";
-import { useState,useEffect } from "react";
+
 
 
 export default function Home() {
-  const [selectedPreferences, setSelectedPreferences] = useState(null);
-
-  const handleAccept = (preferences) => {
-    setSelectedPreferences(preferences);
-    // Your logic when user accepts preferences
+  const handleAcceptAll = () => {
+    // Your logic when the user accepts cookies
+    console.log('Cookies accepted');
   };
-
-  const handleAcceptNecessaryOnly = () => {
-    // Your logic when user accepts necessary cookies only
+  const handleRejectAll = () => {
+    // Your logic when the user rejects all cookies
+    console.log('Cookies rejected');
   };
-
   return (
     <div className="w-10/12 mx-auto ">
      <Magnetic>
@@ -68,9 +65,9 @@ export default function Home() {
       </EntranceAnimation>
       </div>
             </div>
-            <CookieConsentModal
-        onAccept={handleAccept}
-        onAcceptNecessaryOnly={handleAcceptNecessaryOnly}
+            <CookieConsentModal onAccept={handleAcceptAll }  onReject={handleRejectAll}
+
+
       />
     </div>
   );

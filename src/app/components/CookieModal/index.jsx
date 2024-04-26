@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { setCookie, getCookie } from '@/utils/cookieUtils';
 
-function CookieConsentBanner({ onAccept }) {
+function CookieConsentBanner({ onAccept,onReject }) {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -16,12 +16,13 @@ function CookieConsentBanner({ onAccept }) {
   const handleAcceptAll = () => {
     setCookie('cookieConsent', 'true', { expires: 365 });
     onAccept();
-    setShowBanner(false);
+    setShowBanner(false); // Hide the modal after accepting all cookies
   };
 
   const handleRejectAll = () => {
-    setCookie('cookieConsent', 'false', { expires: 365 });
-    setShowBanner(false);
+    setCookie('cookieConsent', 'true', { expires: 365 });
+    setShowBanner(false); // Hide the modal after rejecting all cookies
+    onReject();
   };
 
   return (
