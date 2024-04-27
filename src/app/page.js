@@ -1,11 +1,15 @@
-
+"use client"
 import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
+import Drawer from "@/app/components/Drawers/Drawer"
+import { useState } from "react";
 
 
 export default function Home() {
+ 
+
   return (
     <div className="w-10/12 mx-auto ">
      <Magnetic>
@@ -31,6 +35,12 @@ export default function Home() {
 
              
 
+            </div>
+            <div className="flex">
+          
+            <Drawer direction={"bottom"} />
+            <Drawer direction={"right"} />
+    
             </div>
 
             <div className="">
