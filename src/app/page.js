@@ -3,6 +3,7 @@ import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
+import Typewriter from "./components/Animations/Typewriter";
 
 
 export default function Home() {
@@ -22,6 +23,12 @@ export default function Home() {
      <div className="">
                 Counting from <CountUp start={200} end={1000} separator={','} duration={5.5} decimalPlaces={0}  /> to{' '}
               
+            </div>
+            <div className="py-10 flex flex-col">
+            <Typewriter text="Hello, World!" delay={100} className="text-red-500" cursorClassName="after:bg-red-500" />
+
+            <Typewriter text="This is a typewriter component." delay={50} />
+
             </div>
             <div className="flex  flex-wrap gap-5 items-center">
               <Button.Shine title="Shine" />
