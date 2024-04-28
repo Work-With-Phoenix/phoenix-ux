@@ -1,12 +1,21 @@
-
+"use client"
 import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
 import Tooltip from "@/app/components/Tooltip"
+import Typewriter from "./components/Animations/Typewriter";
 
 
 export default function Home() {
+  const handleAcceptAll = () => {
+    // Your logic when the user accepts cookies
+    console.log('Cookies accepted');
+  };
+  const handleRejectAll = () => {
+    // Your logic when the user rejects all cookies
+    console.log('Cookies rejected');
+  };
   return (
     <div className="w-10/12 mx-auto ">
      <Magnetic>
@@ -35,8 +44,14 @@ export default function Home() {
       </Tooltip>
     </div>
      <div className="">
-                Counting from <CountUp start={0} end={1000} duration={5.5}  /> to{' '}
+                Counting from <CountUp start={200} end={1000} separator={','} duration={5.5} decimalPlaces={0}  /> to{' '}
               
+            </div>
+            <div className="py-10 flex flex-col">
+            <Typewriter text="Hello, World!" delay={100} className="text-red-500" cursorClassName="after:bg-red-500" />
+
+            <Typewriter text="This is a typewriter component." delay={50} />
+
             </div>
             <div className="flex  flex-wrap gap-5 items-center">
               <Button.Shine title="Shine" />
@@ -81,3 +96,4 @@ export default function Home() {
     </div>
   );
 }
+
