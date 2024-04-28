@@ -5,18 +5,11 @@ import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
 import Tooltip from "@/app/components/Tooltip"
 import Typewriter from "./components/Animations/Typewriter";
-import Marquee from "./components/Animations/Marquee"
+import Drawer from "@/app/components/Drawers/Drawer"
+import Marquee from "@/app/components/Animations/Marquee"
 
 
 export default function Home() {
-  const handleAcceptAll = () => {
-    // Your logic when the user accepts cookies
-    console.log('Cookies accepted');
-  };
-  const handleRejectAll = () => {
-    // Your logic when the user rejects all cookies
-    console.log('Cookies rejected');
-  };
   return (
     <div className="w-10/12 mx-auto ">
      <Magnetic>
@@ -70,6 +63,12 @@ export default function Home() {
 
              
 
+            </div>
+            <div className="flex">
+          
+            <Drawer direction={"bottom"} />
+            <Drawer direction={"right"} />
+    
             </div>
 
             <div className="">
