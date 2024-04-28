@@ -3,6 +3,7 @@ import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
+import Marquee from "@/app/components/Animations/Marquee"
 
 
 export default function Home() {
@@ -54,6 +55,24 @@ export default function Home() {
         <p>This content will animate in from the bottom.</p>
       </EntranceAnimation>
       </div>
+            </div>
+
+            <div className="w-full bg-blue-200">
+            <h1>Marquee to the Left</h1>
+      <Marquee direction="left">
+        <div className="marquee-item">Item 1</div>
+        <div className="marquee-item">Item 2</div>
+        <div className="marquee-item">Item 3</div>
+        {/* Add more items as needed */}
+      </Marquee>
+
+      <h1>Marquee to the Right</h1>
+      <Marquee direction="right" duration={20}>
+        <div className="marquee-item">Item 1</div>
+        <div className="marquee-item">Item 2</div>
+        <div className="marquee-item">Item 3</div>
+        {/* Add more items as needed */}
+      </Marquee>
             </div>
     </div>
   );
