@@ -5,6 +5,7 @@ import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
 import Tooltip from "@/app/components/Tooltip"
 import Typewriter from "./components/Animations/Typewriter";
+import Marquee from "./components/Animations/Marquee"
 
 
 export default function Home() {
@@ -92,6 +93,14 @@ export default function Home() {
         <p>This content will animate in from the bottom.</p>
       </EntranceAnimation>
       </div>
+            </div>
+            <div >
+              <Marquee direction="left" className="bg-red-200">
+                <div>this starts from the left</div>
+              </Marquee>
+              <Marquee direction="right" className="bg-red-200">
+                <div>this starts from the right</div>
+              </Marquee>
             </div>
     </div>
   );
