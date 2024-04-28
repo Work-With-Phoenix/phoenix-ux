@@ -141,6 +141,7 @@ export default Example;
 | start     | number   |          | The starting number for the count-up animation. |
 | end       | number   |          | The target number to count up to.        |
 | duration  | number   | 3        | The duration of the count-up animation in seconds. |
+| separator | string   | ,        | The separator of the countup from a thousand. |
 
 ### Button Props
 
@@ -152,7 +153,7 @@ export default Example;
 
 ### Entrance Animation
 
-This will allow users to import and use the `EntranceAnimation` component from your package in their projects.
+This will allow users to import and use the `EntranceAnimation` component from our package in their projects.
 
 | Name       | Type   | Default | Description                               |
 |------------|--------|---------|-------------------------------------------|
@@ -162,6 +163,29 @@ This will allow users to import and use the `EntranceAnimation` component from y
 | `distance` | `number`   | - | The distance the content will animate from in pixels. |
 | `direction`| `'left' | 'right' | 'up' | 'down'` | - | The direction from which the content will animate. |
 
+### Typewriter animation
+
+This will allow users to import and use the `Typewriter` component from our package in their projects.
+
+### Typewiter Props
+
+| Prop      | Type     | Default  | Description                              |
+| --------- | -------- | -------- | ---------------------------------------- |
+| text      | string   |          | The text is a description for the effect  |
+
+```jsx
+import React from 'react';
+import Typewriter  from 'phoenix-ux/src/app/components/Animations/Typewriter';
+
+const MyCounter = () => {
+    return (
+      <>
+       <Typewriter text="Hello, World!" delay={100} className="text-red-500" cursorClassName="after:bg-red-500" />
+        </>
+    );
+};
+
+export
 ---
 
 ## Configuration
@@ -215,3 +239,22 @@ This project is licensed under the [MIT License](LICENSE).
 
 - [GSAP](https://greensock.com/) for providing a powerful animation library.
 - The hover effects for our buttons were inspired by the work of [Shrihari](https://tailwindcomponents.com/u/shrihari) on [Tailwind Components](https://tailwindcomponents.com/component/button-hover-effects). We appreciate their creativity and contribution to the web development community.
+
+## Notes
+
+There are more animations and components available and I will be updating them and making them available as soon as I am able to. I am als woring on a more comprehensive documentation and AI-powered solutions to improve Ux development all round.
+
+## Available Components
+
+- Buttons
+- CountUp
+- Typewriter
+- CookieModal (will update this)
+- Drawers (Needs more work)
+- Magnetic
+- Tooltip
+- Entrance Animation
+- Marquee (slide animation - left and right)
+- AOB
+
+In the meantime, Let me know what you'd like to see or learn, contact me at: [info@phoenixui.cloud](mailto:info@phoenixui.cloud)
