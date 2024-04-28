@@ -3,6 +3,7 @@ import Magnetic from "@/app/components/Magnetic"
 import CountUp from "./components/CountUp";
 import Button from "@/app/components/Button"
 import EntranceAnimation from "./components/Animations/Entrance";
+import Tooltip from "@/app/components/Tooltip"
 import Typewriter from "./components/Animations/Typewriter";
 
 
@@ -20,6 +21,28 @@ export default function Home() {
      <Magnetic>
       <button>Magnetic</button>
      </Magnetic>
+     <div className="flex py-10 flex-row gap-4 relative w-full">
+     <Tooltip text="Hello, World!" direction={"top"}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+       Hover me
+        </button>
+      </Tooltip>
+      {/* <Tooltip text="Hello, World!" direction={"bottom"}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Bottom
+        </button>
+      </Tooltip> */}
+      <Tooltip text="Hello, World!" direction={"left"}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Hove me
+        </button>
+      </Tooltip>
+      <Tooltip text="Hello, World!" direction={"right"}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+         Hover me
+        </button>
+      </Tooltip>
+    </div>
      <div className="">
                 Counting from <CountUp start={200} end={1000} separator={','} duration={5.5} decimalPlaces={0}  /> to{' '}
               
