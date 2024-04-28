@@ -244,7 +244,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Notes
 
-There are more animations and components available and I will be updating them and making them available as soon as I am able to. I am als woring on a more comprehensive documentation and AI-powered solutions to improve Ux development all round.
+There are more animations and components available and I will be updating them and making them available as soon as I am able to. I am also working on a more comprehensive documentation and AI-powered solutions to improve UI/UX development all round.
 
 ## Available Components
 
@@ -259,4 +259,10 @@ There are more animations and components available and I will be updating them a
 - Marquee (slide animation - left and right)
 - AOB
 
-In the meantime, Let me know what you'd like to see or learn, contact me at: [info@phoenixui.cloud](mailto:info@phoenixui.cloud)
+In the meantime, Let me know what you'd like to see or learn, contact me at: [info@phoenixui.cloud](mailto:info@phoenixui.cloud).
+
+If you find this project helpful, consider ☕️
+
+[![Buying Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buying%20me%20a%20coffee&emoji=☕&slug=phoenixinterface&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/phoenixinterface)
+
+❤️ Phoenix interface
