@@ -177,7 +177,7 @@ This will allow users to import and use the `Typewriter` component from our pack
 import React from 'react';
 import Typewriter  from 'phoenix-ux/src/app/components/Animations/Typewriter';
 
-const MyCounter = () => {
+const Example = () => {
     return (
       <>
        <Typewriter text="Hello, World!" delay={100} className="text-red-500" cursorClassName="after:bg-red-500" />
@@ -185,7 +185,9 @@ const MyCounter = () => {
     );
 };
 
-export
+export default Example
+```
+
 ---
 
 ## Configuration
