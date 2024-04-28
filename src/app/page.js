@@ -12,7 +12,7 @@ export default function Home() {
       <button>Magnetic</button>
      </Magnetic>
      <div className="">
-                Counting from <CountUp start={0} end={1000} duration={5.5}  /> to{' '}
+                Counting from <CountUp start={200} end={1000} separator={','} duration={5.5} decimalPlaces={0}  /> to{' '}
               
             </div>
             <div className="flex  flex-wrap gap-5 items-center">
