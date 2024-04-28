@@ -15,7 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/phoenix-ux/*": ["node_modules/phoenix-ux/src/app/components/*"]
+      "phoenix-ux/*": ["node_modules/phoenix-ux/src/app/components/*"]
     },
     "plugins": [
       {
@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/components/CountUp/index.jsx",
-    "src/utils/CountUp.js",
+    "src/app/utils/CountUp.js",
     "src/app/components/Animations/Entrance/index.jsx",
     "src/app/components/Button/Center/index.jsx",
     "src/app/components/Button/index.jsx",
