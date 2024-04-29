@@ -263,6 +263,6 @@ In the meantime, Let me know what you'd like to see or learn, contact me at: [in
 
 If you find this project helpful, consider ☕️
 
-[![Buying Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buying%20me%20a%20coffee&emoji=☕&slug=phoenixinterface&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/phoenixinterface)
+[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/phoenixinterface)
 
 ❤️ Phoenix interface
