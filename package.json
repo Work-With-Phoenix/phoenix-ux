@@ -1,6 +1,6 @@
 {
   "name": "phoenix-ux",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": false,
   "icon": "https://res.cloudinary.com/dydhh0fyd/image/upload/v1713876321/phoenix/phoenix-ux/icon_chjtia.svg",
   "main": "index.js",

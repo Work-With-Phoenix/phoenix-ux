@@ -261,7 +261,7 @@ There are more animations and components available and I will be updating them a
 
 In the meantime, Let me know what you'd like to see or learn, contact me at: [info@phoenixui.cloud](mailto:info@phoenixui.cloud).
 
-If you find this project helpful, consider ☕️
+If you find this project helpful, consider buying me a ☕️ on :)
 
 [![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/phoenixinterface)
 
